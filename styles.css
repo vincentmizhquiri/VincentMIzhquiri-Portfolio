@@ -300,7 +300,36 @@ ul li::marker {
     margin-bottom: 0.5rem;
     color: #4a4a4a;
 }
+/* About Section with Photo */
+.about-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
 
+.profile-photo-container {
+    flex-shrink: 0;
+    width: 280px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 3px solid #e8e8e8;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.16);
+    border-color: #4a5568;
+}
+
+.about-text {
+    flex: 1;
+}
 @media (max-width: 768px) {
     .main-title {
         font-size: 2rem;
@@ -325,6 +354,16 @@ ul li::marker {
     
     .project-item {
         padding: 1.5rem;
+    }
+    
+    /* Mobile responsive for About section */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-photo-container {
+        width: 220px;
     }
 }
 
